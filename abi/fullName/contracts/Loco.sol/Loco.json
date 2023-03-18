@@ -1,0 +1,15 @@
+[
+  "constructor()",
+  "event AddLocation(string name, bytes32 geohash)",
+  "function addLocation(string name, string description, int32 latitude, int32 longitude, bytes32 geohash)",
+  "function getLocationByGeohash(bytes32 geohash) view returns (tuple(string name, string description, int32 latitude, int32 longitude, bytes32 geohash, bytes32 geohash5, bytes32 geohash3))",
+  "function getLocationByGeohash3ByIndex(bytes32 geohash3, uint256 index) view returns (tuple(string name, string description, int32 latitude, int32 longitude, bytes32 geohash, bytes32 geohash5, bytes32 geohash3))",
+  "function getLocationByGeohash5ByIndex(bytes32 geohash5, uint256 index) view returns (tuple(string name, string description, int32 latitude, int32 longitude, bytes32 geohash, bytes32 geohash5, bytes32 geohash3))",
+  "function getLocationByName(string name) view returns (tuple(string name, string description, int32 latitude, int32 longitude, bytes32 geohash, bytes32 geohash5, bytes32 geohash3))",
+  "function getLocationsByGeohash3Count(bytes32 geohash3) view returns (uint256)",
+  "function getLocationsByGeohash5Count(bytes32 geohash5) view returns (uint256)",
+  "function locationByGeohash(bytes32) view returns (uint256)",
+  "function locationByName(string) view returns (uint256)",
+  "function locationCount() view returns (uint256 _value)",
+  "function locations(uint256) view returns (string name, string description, int32 latitude, int32 longitude, bytes32 geohash, bytes32 geohash5, bytes32 geohash3)"
+]

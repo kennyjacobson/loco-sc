@@ -6,6 +6,7 @@
 // global scope, and execute the script.
 const hre = require("hardhat");
 
+//latest network: 0x36F2ED8be6803942B044918420dDE57B6F253E97
 async function main() {
   const Loco = await hre.ethers.getContractFactory("Loco");
   const loco = await Loco.deploy();
