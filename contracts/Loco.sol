@@ -71,7 +71,6 @@ contract Loco {
         // locations[locationCount.current()].geohash5 = geohash5;
         // locations[locationCount.current()].geohash3 = geohash3;
 
-
         locationByName[name] = locationCount.current();
         locationByGeohash[geohash] = locationCount.current();
         _locationsByGeohash5[geohash5].push(locationCount.current());
