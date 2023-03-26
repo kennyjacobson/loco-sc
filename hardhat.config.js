@@ -29,6 +29,10 @@ module.exports = {
       url: 'https://goerli.base.org',
       accounts: [process.env.BASEKEY],
     },
+    scrollAlpha: {
+      url: "https://alpha-rpc.scroll.io/l2" || "",
+      accounts: [process.env.SCROLLKEY],
+    },
 
   }
 };

@@ -1,6 +1,8 @@
 const hre = require("hardhat");
+require("dotenv").config()
 var fs = require('fs');
-const CUR_BASE_CONTRACT = "0x36F2ED8be6803942B044918420dDE57B6F253E97"
+// const CUR_BASE_CONTRACT = "0x36F2ED8be6803942B044918420dDE57B6F253E97"
+const USE_CONTRACT = process.env.USECONTRACT
 
 async function addLocation(name, description, latitude, longitude, geohash ){
     if (latitude < 1000) {
@@ -8,7 +10,7 @@ async function addLocation(name, description, latitude, longitude, geohash ){
         longitude = Math.ceil(longitude * 10000000) 
     }
     const MyContract = await ethers.getContractFactory("Loco");
-    const locations = await MyContract.attach(CUR_BASE_CONTRACT);   
+    const locations = await MyContract.attach(USE_CONTRACT);   
   
     const geohash10 = ethers.utils.formatBytes32String(geohash)
     // const estimation = await locations.estimateGas.addLocation(name, description, latitude, longitude, geohash10)
